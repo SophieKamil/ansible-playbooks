@@ -1,0 +1,12 @@
+---
+- name: route53 
+  hosts: 54.245.22.189
+  tasks:
+    - name: Route53 a record
+      route53:
+        state: "present"
+        zone: "sophiekamil.com"
+        record: "wordpress.sophiekamil.com"
+        type: A
+        ttl: 7200
+        value: "54.245.22.189" 
